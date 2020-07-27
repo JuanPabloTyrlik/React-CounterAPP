@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas de CounterApp should render <CounterApp /> correctly 1`] = `
+<Fragment>
+  <h1>
+    CounterApp
+  </h1>
+  <h2>
+    0
+  </h2>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "55px",
+      }
+    }
+  >
+    +1
+  </button>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "55px",
+      }
+    }
+  >
+    -1
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Reset
+  </button>
+</Fragment>
+`;

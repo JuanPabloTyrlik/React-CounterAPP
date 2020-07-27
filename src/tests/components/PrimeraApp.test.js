@@ -10,9 +10,19 @@ describe('Pruebas en <PrimeraApp />', () => {
     //     const wrapper = render(<PrimeraApp saludo={saludo} />);
     //     expect(wrapper.getByText(saludo)).toBeInTheDocument();
     // })
-    test('should render <PrimeraApp /> correctamente', () => {
+    test('should render <PrimeraApp /> correctly', () => {
         const saludo = 'Hola, Soy Goku';
         const wrapper = shallow(<PrimeraApp saludo={saludo} />);
         expect(wrapper).toMatchSnapshot();
+    });
+
+    test('should render the subtitle sent with props', () => {
+        const saludo = 'Hola, Soy Goku';
+        const subtitulo = 'Subtitulo';
+        const wrapper = shallow(
+            <PrimeraApp saludo={saludo} subtitulo={subtitulo} />
+        );
+        const textoParrafo = wrapper.find('p').text();
+        expect(textoParrafo).toBe(subtitulo);
     });
 });
